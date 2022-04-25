@@ -7,11 +7,6 @@
 
 	let feedbacks = [];
 
-	$: count = feedbacks.length;
-	$: average =
-		feedbacks.reduce((avg: number, { rating }) => avg + rating, 0) /
-		feedbacks.length;
-
 	const addFeedback = (e: CustomEvent) => {
 		const newFeedback: IFeedback = e.detail;
 		feedbacks = [...feedbacks, newFeedback];
@@ -20,7 +15,7 @@
 
 <main class="container">
 	<FeedbackForm on:add-feedback={addFeedback} />
-	<FeedbackStats {count} {average} />
+	<FeedbackStats />
 	<FeedbackList />
 </main>
 
