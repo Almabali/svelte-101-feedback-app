@@ -6,15 +6,10 @@
 	import type { IFeedback } from "./models/feedbacks";
 
 	let feedbacks = [];
-
-	const addFeedback = (e: CustomEvent) => {
-		const newFeedback: IFeedback = e.detail;
-		feedbacks = [...feedbacks, newFeedback];
-	};
 </script>
 
 <main class="container">
-	<FeedbackForm on:add-feedback={addFeedback} />
+	<FeedbackForm />
 	<FeedbackStats />
 	<FeedbackList />
 </main>

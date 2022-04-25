@@ -1,7 +1,7 @@
 <script lang="ts">
+    import { FeedbackStore } from "../stores";
     import { v4 as uuidv4 } from "uuid";
     import type { IFeedback } from "../models/feedbacks";
-    import { createEventDispatcher } from "svelte";
 
     import RatingSelect from "./RatingSelect.svelte";
     import Button from "./ui/Button.svelte";
@@ -12,8 +12,6 @@
     let btnDisabled = true;
     let min = 10;
     let message;
-
-    const dispatch = createEventDispatcher();
 
     const handleInput = () => {
         if (text.trim().length <= min) {
@@ -38,7 +36,11 @@
             rating: +rating,
         };
 
-        dispatch("add-feedback", newFeedback);
+        FeedbackStore.update((currentFeedbacks) => [
+            newFeedback,
+            ...currentFeedbacks,
+        ]);
+
         text = "";
         rating = 10;
     };
