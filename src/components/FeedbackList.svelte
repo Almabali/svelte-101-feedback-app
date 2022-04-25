@@ -1,10 +1,10 @@
 <script lang="ts">
     import type { IFeedback } from "../models/feedbacks";
+import FeedbackItem from "./FeedbackItem.svelte";
 
     export let feedbacks: Array<IFeedback> = [];
 </script>
 
-{#each feedbacks as fb (fb.id)}
-    <h3>{fb.text}</h3>
-    <br>
+{#each feedbacks as feedback (feedback.id)}
+    <FeedbackItem {feedback}></FeedbackItem>
 {/each}
