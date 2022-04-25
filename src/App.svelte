@@ -5,7 +5,7 @@
 	let feedbacks: Array<IFeedback> = INIT_FEEDBACKS;
 </script>
 
-<main>
+<main class="container">
 	<FeedbackList {feedbacks}></FeedbackList>
 </main>
 
