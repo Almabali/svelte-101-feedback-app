@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { fade, scale } from 'svelte/transition'
     import type { IFeedback } from "../models/feedbacks";
     import FeedbackItem from "./FeedbackItem.svelte";
 
@@ -6,5 +7,7 @@
 </script>
 
 {#each feedbacks as feedback (feedback.id)}
-    <FeedbackItem {feedback} on:delete-feedback />
+    <div in:scale out:fade>
+        <FeedbackItem {feedback} on:delete-feedback />
+    </div>
 {/each}
