@@ -1,8 +1,7 @@
-*Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
+# My first Svelte App - Feedback App
 
-*Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)*
-
----
+This is a short tutorial project to get to know Svelte.
+It is based upon Traversy Media's [Svelte Crash Course video](https://www.youtube.com/watch?v=3TVy6GdtNuQ&ab_channel=TraversyMedia).
 
 # svelte app
 
